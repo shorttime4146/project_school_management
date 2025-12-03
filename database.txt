@@ -1,20 +1,75 @@
 create table users(
 	id int not null auto_increment,
-    first_name varchar(200),
-    last_name varchar(100),
-    user_id int(10),
-    gender_id int(10),
+    	first_name varchar(200),
+    	last_name varchar(100),
+    	user_id int(10),
+    	gender_id int(10),
    	fathers_name varchar(250),
-    mothers_name varchar(250),
+    	mothers_name varchar(250),
    	date_of_birth date,
-    religion_id int(10),
-    joining_date date,
-    email varchar(250),
-    subject_id int(20),
-    class_id int(50),
-    section_id int(10),
-    id_no int(100),
-    phone int(20),
-    address varchar(500),
-    primary key(id)
+    	religion_id int(10),
+    	joining_date date,
+    	email varchar(250),
+    	subject_id int(20),
+    	class_id int(50),
+    	section_id int(10),
+    	id_no int(100),
+    	phone int(20),
+    	address varchar(500),
+    	primary key(id)
+)
+
+
+create table parents(
+	id int not null auto_increment,
+    	first_name varchar(200),
+    	last_name varchar(100),
+    	gender_id int(10),
+    	occupation varchar(100),
+    	id_no int(50),
+    	blood_grop_id int(10),
+    	religion_id int(10),
+    	email varchar(250),
+    	address varchar(500),
+    	phone int(20),
+    	short_bio varchar(300),
+    	primary key(id)
+)
+
+
+create table students(
+	id int not null auto_increment,
+    	first_name varchar(200),
+    	last_name varchar(100),
+    	gender_id int(10),
+    	date_of_birth date,
+    	roll int(50),
+    	blood_grop_id int(10),
+    	religion_id int(10),
+    	email varchar(250),
+    	class_id int(50),
+    	section_id int(10),
+    	admission_id int(100),
+    	phone int(20),
+    	short_bio varchar(300),
+    	primary key(id)
+)
+
+
+create table teachers(
+	id int not null auto_increment,
+    	first_name varchar(200),
+    	last_name varchar(100),
+    	gender_id int(10),
+    	date_of_birth date,
+    	id_no int(50),
+    	blood_grop_id int(10),
+    	religion_id int(10),
+    	email varchar(250),
+    	class_id int(50),
+    	section_id int(10),
+    	address varchar(500),
+    	phone int(20),
+    	short_bio varchar(300),
+    	primary key(id)
 )
