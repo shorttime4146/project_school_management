@@ -34,15 +34,15 @@
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
-                    Dashboard
+                    Users
                     <i class="nav-arrow bi bi-chevron-right"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="index.html" class="nav-link active">
+                    <a href="user_add_form.php" class="nav-link active">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v1</p>
+                      <p>User Add</p>
                     </a>
                   </li>
                   <li class="nav-item">

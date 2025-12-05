@@ -16,6 +16,12 @@ create table users(
     	id_no int(100),
     	phone int(20),
     	address varchar(500),
+	inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date timestamp,
+	status_active int(20),
+	is_deleted int(20),
     	primary key(id)
 )
 
@@ -73,3 +79,47 @@ create table teachers(
     	short_bio varchar(300),
     	primary key(id)
 )
+
+<!--begin::Col-->
+                                      <div class="col-md-6">
+                                        <label for="validationCustomUsername" class="form-label">Username</label>
+                                        <div class="input-group has-validation">
+                                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="validationCustomUsername"
+                                            aria-describedby="inputGroupPrepend"
+                                            required
+                                          />                                          
+                                        </div>
+                                      </div>
+                                    <!--end::Col-->
+
+<!--begin::Col-->
+                                      <div class="col-md-6">
+                                        <label for="validationCustom04" class="form-label">State</label>
+                                        <select class="form-select" id="validationCustom04" required>
+                                          <option selected disabled value="">Choose...</option>
+                                          <option>...</option>
+                                        </select>                                        
+                                      </div>
+                                    <!--end::Col-->
+                                    
+                                    <!--begin::Col-->
+                                      <div class="col-12">
+                                        <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value=""
+                                            id="invalidCheck"
+                                            required
+                                          />
+                                          <label class="form-check-label" for="invalidCheck">
+                                            Agree to terms and conditions
+                                          </label>
+                                          <div class="invalid-feedback">You must agree before submitting.</div>
+                                        </div>
+                                      </div>
+                                    <!--end::Col-->
