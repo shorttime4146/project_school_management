@@ -38,7 +38,7 @@
             $sql="select * from users where id=$insert_last_id"; 
             $data_obj=$db_conn->query($sql);
             $data_arr=$data_obj->fetch_assoc(); 
-            
+
             if($data_obj->num_rows>0){
                 $_SESSION["user_id"]=$data_arr["id"];
                 $_SESSION["first_name"]=$data_arr["first_name"];
@@ -46,7 +46,7 @@
                 $_SESSION["email"]=$data_arr["email"];
                 $_SESSION["phone"]=$data_arr["phone"];
 
-                //header("Location:all_data_view.php?id=".$data_arr["id"]);
+                header("Location:all_data_view.php?id=".$data_arr["id"]);
                 return"successfull";
             }else{
                 return $sql;

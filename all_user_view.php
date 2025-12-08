@@ -1,3 +1,9 @@
+<?php 
+    require('config.php');
+    
+    $result=select_sql('users');
+?>
+
 <!--begin::Header-->
   <?php require 'header.php'; ?>
 <!--end::Header-->
@@ -52,10 +58,29 @@
                                                             <th style="width: 100px">Last Name</th>
                                                             <th style="width: 200px">Email</th>
                                                             <th style="width: 20px">Phone</th>
+                                                            <th style="width: 200px" colspan="2">Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        
+                                                        <?php 
+                                                            foreach($result as $row){
+                                                        ?>
+                                                        <tr>
+                                                            <td width="50px"><?php echo $row["id"]; ?></td>
+                                                            <td width="200px"><?php echo $row["first_name"]; ?></td>
+                                                            <td width="150px"><?php echo $row["last_name"]; ?></td>
+                                                            <td width="250px"><?php echo $row["email"]; ?></td>
+                                                            <td width="250px"><?php echo $row["phone"]; ?></td>
+                                                            <td width="100px" align="center">                
+                                                                <a href="update_form.php?up_id=<?php echo $row['id']; ?>">Update</a>
+                                                            </td>
+                                                            <td width="100px" align="center">
+                                                                <a href="delete_controller.php?del_id=<?php echo $row['id']; ?>">Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                        <?php 
+                                                            }
+                                                        ?>
                                                     </tbody>
                                                 </table>
                                             </div>
