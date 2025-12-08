@@ -46,9 +46,9 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="index2.html" class="nav-link">
+                    <a href="all_user_view.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v2</p>
+                      <p>User View</p>
                     </a>
                   </li>
                   <li class="nav-item">

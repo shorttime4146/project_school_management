@@ -48,7 +48,7 @@
                           </div>
                         <!--end::Header-->
                         <!--begin::Form-->
-                          <form class="needs-validation" novalidate action="user_controller.php">
+                          <form class="needs-validation" novalidate action="user_controller.php" method="post">
                             <!--begin::Body-->
                               <div class="card-body">
                                 <!--begin::Row-->

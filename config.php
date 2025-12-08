@@ -32,19 +32,14 @@
         }*/
         $data_obj=$db_conn->query($sql);  
         if($data_obj>0){
-         
-         
-            if($data_obj->num_rows>0){
 
-                $insert_last_id = mysqli_insert_id($db_conn);  
-            
+            $insert_last_id = mysqli_insert_id($db_conn);         
                 // $sql="select * from resigter where user_name='$u_name' and password=$pass";
-
-                $sql="select * from users where id=$insert_last_id";  
-
-                $data_obj=$db_conn->query($sql);
-                $data_arr=$data_obj->fetch_assoc(); 
-
+            $sql="select * from users where id=$insert_last_id"; 
+            $data_obj=$db_conn->query($sql);
+            $data_arr=$data_obj->fetch_assoc(); 
+            
+            if($data_obj->num_rows>0){
                 $_SESSION["user_id"]=$data_arr["id"];
                 $_SESSION["first_name"]=$data_arr["first_name"];
                 $_SESSION["last_name"]=$data_arr["last_name"];
