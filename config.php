@@ -83,4 +83,17 @@
             return"Update Data Failed.</br>".$db_conn->error;
         }
     }
+
+    function delete_sql($tabale_name, $whereCond="1"){
+        global $db_conn;
+
+        $sql="delete from $tabale_name where $whereCond";
+        $data=$db_conn->query($sql);
+
+        if($db_conn->affected_rows>0){
+            header("Location:all_user_view.php");
+        }else{
+            return $sql;
+        }
+    }
 ?>
