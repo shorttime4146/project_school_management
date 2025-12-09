@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2025 at 08:26 AM
+-- Generation Time: Dec 09, 2025 at 09:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -58,7 +58,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_id`, `gender_id`, `fathers_name`, `mothers_name`, `date_of_birth`, `religion_id`, `joining_date`, `email`, `subject_id`, `class_id`, `section_id`, `id_no`, `phone`, `address`, `inserted_by`, `insert_date`, `updated_by`, `update_date`, `status_active`, `is_deleted`) VALUES
-(15, 'Mamun', 'Ahmed', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'mamun@gmail.com', NULL, NULL, NULL, NULL, 192896, NULL, NULL, '2025-12-07 21:19:22', NULL, NULL, NULL, NULL);
+(15, 'Mamun', 'Ahmed', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'mamun@gmail.com', NULL, NULL, NULL, NULL, 192896, NULL, NULL, '2025-12-07 21:19:22', NULL, NULL, NULL, NULL),
+(16, 'Suraya', 'Islam', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'suraya@gmail.com', NULL, NULL, NULL, NULL, 161257, NULL, NULL, '2025-12-09 07:44:53', NULL, NULL, NULL, NULL),
+(17, 'M', 'R', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'mr@gmail.com', NULL, NULL, NULL, NULL, 133166, NULL, NULL, '2025-12-09 08:46:27', NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -78,7 +80,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

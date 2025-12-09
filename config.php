@@ -46,7 +46,7 @@
                 $_SESSION["email"]=$data_arr["email"];
                 $_SESSION["phone"]=$data_arr["phone"];
 
-                header("Location:all_data_view.php?id=".$data_arr["id"]);
+                header("Location:all_user_view.php?id=".$data_arr["id"]);
                 return"successfull";
             }else{
                 return $sql;
@@ -78,7 +78,7 @@
         $sql="update $table_name set $val_str where $wherecon";
 
         if($db_conn->query($sql)==1){
-            header("Location:all_data_view.php");
+            header("Location:all_user_view.php");
         }else{
             return"Update Data Failed.</br>".$db_conn->error;
         }

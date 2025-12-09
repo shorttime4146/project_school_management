@@ -72,7 +72,7 @@
                                                             <td width="250px"><?php echo $row["email"]; ?></td>
                                                             <td width="250px"><?php echo $row["phone"]; ?></td>
                                                             <td width="100px" align="center">                
-                                                                <a href="update_form.php?up_id=<?php echo $row['id']; ?>">Update</a>
+                                                                <a href="user_update_form.php?up_id=<?php echo $row['id']; ?>">Update</a>
                                                             </td>
                                                             <td width="100px" align="center">
                                                                 <a href="delete_controller.php?del_id=<?php echo $row['id']; ?>">Delete</a>
