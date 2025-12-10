@@ -26,6 +26,6 @@
         'email'=>$eml,
         'phone'=>$phn
     ];
-    $result=update_sql("students", $dataArr, "id=$up_id");
+    $result=update_sql("users", $dataArr, "id=$up_id");
         echo $result;
 ?>

@@ -30,6 +30,7 @@
               data-accordion="false"
               id="navigation"
             >
+              <!--USER menu-->
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
@@ -50,15 +51,60 @@
                       <i class="nav-icon bi bi-circle"></i>
                       <p>User View</p>
                     </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="index3.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v3</p>
-                    </a>
-                  </li>
+                  </li>                
                 </ul>
               </li>
+
+              <!--STUDENT menu-->
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Students
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="student_add_form.php" class="nav-link active">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student Add</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="all_student_view.php" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Student View</p>
+                    </a>
+                  </li>                
+                </ul>
+              </li>
+
+              <!--TEACHER menu-->
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Teachers
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="teacher_add_form.php" class="nav-link active">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Teacher Add</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="all_teacher_view.php" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Teacher View</p>
+                    </a>
+                  </li>                
+                </ul>
+              </li>
+
               <li class="nav-item">
                 <a href="dist/generate/theme.html" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>

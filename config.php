@@ -25,12 +25,15 @@
         $val_str=implode(",",$value);
 
         $sql="insert into $table_name($col_str) value($val_str)";
-        /*if($db_conn->query($sql)==1){
-            header("Location:all_data_view.php");
+        if($db_conn->query($sql)==1){
+            //header("Location:all_user_view.php");
+            //header("Location:all_student_view.php");
+            header("Location:all_teacher_view.php");
+            return"successfull";
         }else{
             return"Error.</br>".$db_conn->error;
-        }*/
-        $data_obj=$db_conn->query($sql);  
+        }
+        /*$data_obj=$db_conn->query($sql);  
         if($data_obj>0){
 
             $insert_last_id = mysqli_insert_id($db_conn);         
@@ -46,14 +49,15 @@
                 $_SESSION["email"]=$data_arr["email"];
                 $_SESSION["phone"]=$data_arr["phone"];
 
-                header("Location:all_user_view.php?id=".$data_arr["id"]);
-                return"successfull";
+                //header("Location:all_user_view.php?id=".$data_arr["id"]);
+                header("Location:all_student_view.php");
+                //return"successfull";
             }else{
                 return $sql;
             }
         }else{
-            echo"Error.</br>".$conn->error;
-        }
+            echo"Error.</br>".$db_conn->error;
+        }*/
     }
 
     function select_sql($table_name, $column="*", $wherecon="1"){
@@ -78,7 +82,9 @@
         $sql="update $table_name set $val_str where $wherecon";
 
         if($db_conn->query($sql)==1){
-            header("Location:all_user_view.php");
+            //header("Location:all_user_view.php");
+            //header("Location:all_student_view.php");
+            header("Location:all_teacher_view.php");
         }else{
             return"Update Data Failed.</br>".$db_conn->error;
         }
@@ -91,7 +97,9 @@
         $data=$db_conn->query($sql);
 
         if($db_conn->affected_rows>0){
-            header("Location:all_user_view.php");
+            //header("Location:all_user_view.php");
+            //header("Location:all_student_view.php");
+            header("Location:all_teacher_view.php");
         }else{
             return $sql;
         }

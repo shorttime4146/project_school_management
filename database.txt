@@ -19,7 +19,7 @@ create table users(
 	inserted_by int(20),
 	insert_date timestamp,
 	updated_by int(20),
-	update_date timestamp,
+	update_date date,
 	status_active int(20),
 	is_deleted int(20),
     	primary key(id)
@@ -39,6 +39,12 @@ create table parents(
     	address varchar(500),
     	phone int(20),
     	short_bio varchar(300),
+	inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
     	primary key(id)
 )
 
@@ -58,6 +64,12 @@ create table students(
     	admission_id int(100),
     	phone int(20),
     	short_bio varchar(300),
+	inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
     	primary key(id)
 )
 
@@ -77,6 +89,12 @@ create table teachers(
     	address varchar(500),
     	phone int(20),
     	short_bio varchar(300),
+	inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
     	primary key(id)
 )
 

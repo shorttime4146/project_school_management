@@ -1,13 +1,3 @@
-<?php 
-    require('config.php');
-
-    $id=$_GET["up_id"];
-
-    $sql="select * from users where id=$id";
-    $update=$db_conn->query($sql);
-    $data=$update->fetch_assoc();
-?>
-
 <!--begin::Header-->
   <?php require 'header.php'; ?>
 <!--end::Header-->
@@ -28,13 +18,13 @@
             <!--begin::Row-->
               <div class="row">
                 <div class="col-sm-6">
-                  <h3 class="mb-0">User Form</h3>
+                  <h3 class="mb-0">Teacher Form</h3>
                 </div>
                 <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-end">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">User Form</li>
-                    </ol>
+                  <ol class="breadcrumb float-sm-end">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Teacher Form</li>
+                  </ol>
                 </div>
               </div>
             <!--end::Row-->
@@ -54,25 +44,24 @@
                       <div class="card card-info card-outline mb-4">
                         <!--begin::Header-->
                           <div class="card-header">
-                            <div class="card-title">User Update Form</div>
+                            <div class="card-title">Teacher Add Form</div>
                           </div>
                         <!--end::Header-->
                         <!--begin::Form-->
-                          <form class="needs-validation" novalidate action="user_update_controller.php" method="post">
+                          <form class="needs-validation" novalidate action="teacher_controller.php" method="post">
                             <!--begin::Body-->
                               <div class="card-body">
                                 <!--begin::Row-->
                                   <div class="row g-3">
                                     <!--begin::Col-->
                                       <div class="col-md-6">
-                                        <input type="hidden" name="update_id" value="<?php echo $data["id"]; ?>"></br>
                                         <label for="validationCustom01" class="form-label">First name</label>
                                           <input
                                             type="text"
                                             name="first_name"
                                             class="form-control"
                                             id="validationCustom01"
-                                            value="<?php echo $data["first_name"]; ?>"
+                                            value=""
                                             required
                                           />
                                         <div class="valid-feedback">Looks good!</div>
@@ -86,7 +75,7 @@
                                           name="last_name"
                                           class="form-control"
                                           id="validationCustom02"
-                                          value="<?php echo $data["last_name"]; ?>"
+                                          value=""
                                           required
                                         />
                                         <div class="valid-feedback">Looks good!</div>
@@ -100,7 +89,7 @@
                                           name="email"
                                           class="form-control"
                                           id="validationCustom02"
-                                          value="<?php echo $data["email"]; ?>"
+                                          value=""
                                           required
                                         />
                                         <div class="valid-feedback">Looks good!</div>
@@ -114,7 +103,7 @@
                                           name="phone"
                                           class="form-control"
                                           id="validationCustom02"
-                                          value="<?php echo $data["phone"]; ?>"
+                                          value=""
                                           required
                                         />
                                         <div class="valid-feedback">Looks good!</div>

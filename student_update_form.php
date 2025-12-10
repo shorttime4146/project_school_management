@@ -3,7 +3,7 @@
 
     $id=$_GET["up_id"];
 
-    $sql="select * from users where id=$id";
+    $sql="select * from students where id=$id";
     $update=$db_conn->query($sql);
     $data=$update->fetch_assoc();
 ?>
@@ -28,12 +28,12 @@
             <!--begin::Row-->
               <div class="row">
                 <div class="col-sm-6">
-                  <h3 class="mb-0">User Form</h3>
+                  <h3 class="mb-0">Student Form</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">User Form</li>
+                        <li class="breadcrumb-item active" aria-current="page">Student Form</li>
                     </ol>
                 </div>
               </div>
@@ -54,11 +54,11 @@
                       <div class="card card-info card-outline mb-4">
                         <!--begin::Header-->
                           <div class="card-header">
-                            <div class="card-title">User Update Form</div>
+                            <div class="card-title">Student Update Form</div>
                           </div>
                         <!--end::Header-->
                         <!--begin::Form-->
-                          <form class="needs-validation" novalidate action="user_update_controller.php" method="post">
+                          <form class="needs-validation" novalidate action="student_update_controller.php" method="post">
                             <!--begin::Body-->
                               <div class="card-body">
                                 <!--begin::Row-->
