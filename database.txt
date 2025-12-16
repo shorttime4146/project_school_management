@@ -98,6 +98,41 @@ create table teachers(
     	primary key(id)
 )
 
+
+create table subjects(
+	id int not null auto_increment,
+    subject_name varchar(200),
+    subject_type varchar(200),
+    class int(10),
+    subject_date date,
+    inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
+    primary key(id)
+)
+
+
+create table class_routine(
+	id int not null auto_increment,
+    class int(10),
+    subject_id int(10),
+    section varchar(10),
+    teacher_id int(20),
+    class_time timestamp,
+    class_date date,
+    inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
+    primary key(id)
+)
+
+
 <!--begin::Col-->
                                       <div class="col-md-6">
                                         <label for="validationCustomUsername" class="form-label">Username</label>
