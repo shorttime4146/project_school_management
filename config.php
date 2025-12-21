@@ -28,7 +28,8 @@
         if($db_conn->query($sql)==1){
             //header("Location:all_user_view.php");
             //header("Location:all_student_view.php");
-            header("Location:all_teacher_view.php");
+            //header("Location:all_teacher_view.php");
+            //header("Location:all_subject_view.php");
             return"successfull";
         }else{
             return"Error.</br>".$db_conn->error;

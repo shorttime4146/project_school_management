@@ -99,21 +99,6 @@ create table teachers(
 )
 
 
-create table subjects(
-	id int not null auto_increment,
-    subject_name varchar(200),
-    subject_type varchar(200),
-    class int(10),
-    subject_date date,
-    inserted_by int(20),
-	insert_date timestamp,
-	updated_by int(20),
-	update_date date,
-	status_active int(20),
-	is_deleted int(20),
-    primary key(id)
-)
-
 
 create table class_routine(
 	id int not null auto_increment,
@@ -130,6 +115,20 @@ create table class_routine(
 	status_active int(20),
 	is_deleted int(20),
     primary key(id)
+)
+
+
+create table subjects(
+	id int not null auto_increment,
+    	subject_name varchar(100),
+    	subject_type_id int(10),
+    	inserted_by int(20),
+	insert_date timestamp,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
+    	primary key(id)
 )
 
 
