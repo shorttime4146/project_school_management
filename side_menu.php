@@ -130,6 +130,31 @@
                 </ul>
               </li>
 
+              <!--CLASS SCHEDULE menu-->
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Class Schedule
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="class_add_form.php" class="nav-link active">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Class Add</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="all_class_view.php" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Class Schedule View</p> 
+                    </a>
+                  </li>                
+                </ul>
+              </li>
+
               <li class="nav-item">
                 <a href="dist/generate/theme.html" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>

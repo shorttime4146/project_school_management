@@ -132,6 +132,24 @@ create table subjects(
 )
 
 
+create table class_schedule(
+	id int not null auto_increment,
+    	teachert_id int(10),
+    	class_id int(10),
+    	subject_id int(10),
+    	section_id int(10),
+    	class_time timestamp,
+    	class_date date,
+    	inserted_by int(20),
+	insert_date date,
+	updated_by int(20),
+	update_date date,
+	status_active int(20),
+	is_deleted int(20),
+    	primary key(id)
+)
+
+
 <!--begin::Col-->
                                       <div class="col-md-6">
                                         <label for="validationCustomUsername" class="form-label">Username</label>

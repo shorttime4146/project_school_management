@@ -1,7 +1,7 @@
 <?php 
     require('config.php');
     
-    $result=select_sql('students');
+    $result=select_sql("subjects");
 ?>
 
 <!--begin::Header-->
@@ -23,12 +23,12 @@
                         <!--begin::Row-->
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h3 class="mb-0">Student Tables</h3>
+                                    <h3 class="mb-0">Subject Tables</h3>
                                 </div>
                                 <div class="col-sm-6">
                                     <ol class="breadcrumb float-sm-end">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Student Tables</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Subject Tables</li>
                                     </ol>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <div class="col-md-12">
                                     <div class="card mb-4">
                                         <div class="card-header">
-                                            <h3 class="card-title">Students Table</h3>
+                                            <h3 class="card-title">Subjects Table</h3>
                                         </div>
                                         <!-- /.card-header -->
                                             <div class="card-body">
@@ -54,11 +54,15 @@
                                                     <thead>
                                                         <tr>
                                                             <th style="width: 10px">Id</th>
-                                                            <th style="width: 200px">First Name</th>
-                                                            <th style="width: 100px">Last Name</th>
-                                                            <th style="width: 200px">Email</th>
-                                                            <th style="width: 20px">Phone</th>
-                                                            <th style="width: 200px" colspan="2">Action</th>
+                                                            <th style="width: 200px">Subject Name</th>
+                                                            <th style="width: 20px">Subject Code</th>
+                                                            <th style="width: 20px">Subject Type Id</th>
+                                                            <th style="width: 20px">Inserted By</th>
+                                                            <th style="width: 20px">Insert Date</th>
+                                                            <th style="width: 20px">Updated By</th>
+                                                            <th style="width: 20px">Update Date</th>
+                                                            <th style="width: 20px">Is Deleted</th>
+                                                            <th style="width: 100px" colspan="2">Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -67,15 +71,19 @@
                                                         ?>
                                                         <tr>
                                                             <td width="50px"><?php echo $row["id"]; ?></td>
-                                                            <td width="200px"><?php echo $row["first_name"]; ?></td>
-                                                            <td width="150px"><?php echo $row["last_name"]; ?></td>
-                                                            <td width="250px"><?php echo $row["email"]; ?></td>
-                                                            <td width="250px"><?php echo $row["phone"]; ?></td>
-                                                            <td width="100px" align="center">                
-                                                                <a href="student_update_form.php?up_id=<?php echo $row['id']; ?>">Update</a>
+                                                            <td width="200px"><?php echo $row["subject_name"]; ?></td>
+                                                            <td width="20px"><?php echo $row["subject_code"]; ?></td>
+                                                            <td width="20px"><?php echo $row["subject_type_id"]; ?></td>
+                                                            <td width="20px"><?php echo $row["inserted_by"]; ?></td>
+                                                            <td width="20px"><?php echo $row["insert_date"]; ?></td>
+                                                            <td width="20px"><?php echo $row["updated_by"]; ?></td>
+                                                            <td width="20px"><?php echo $row["update_date"]; ?></td>
+                                                            <td width="20px"><?php echo $row["is_deleted"]; ?></td>
+                                                            <td width="50px" align="center">                
+                                                                <a href="sub_update_form.php?up_id=<?php echo $row['id']; ?>">Update</a>
                                                             </td>
-                                                            <td width="100px" align="center">
-                                                                <a href="student_delete_controller.php?del_id=<?php echo $row['id']; ?>">Delete</a>
+                                                            <td width="50px" align="center">
+                                                                <a href="sub_delete_controller.php?del_id=<?php echo $row['id']; ?>">Delete</a>
                                                             </td>
                                                         </tr>
                                                         <?php 
