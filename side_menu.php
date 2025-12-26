@@ -147,7 +147,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="all_class_view.php" class="nav-link">
+                    <a href="all_class_schedule_view.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Class Schedule View</p> 
                     </a>

@@ -1,8 +1,15 @@
+<?php 
+    require('config.php');
+
+    $id=$_GET["up_id"];
+
+    $sql="select * from subjects where id=$id";
+    $update=$db_conn->query($sql);
+    $data=$update->fetch_assoc();
+?>
+
 <!--begin::Header-->
-  <?php 
-    require 'header.php';
-    require('config.php'); 
-  ?>
+  <?php require 'header.php'; ?>
 <!--end::Header-->
 
 <!--begin::Menu-->
@@ -24,10 +31,10 @@
                   <h3 class="mb-0">Class Schedule Form</h3>
                 </div>
                 <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-end">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Class Schedule Form</li>
-                  </ol>
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Class Schedule Form</li>
+                    </ol>
                 </div>
               </div>
             <!--end::Row-->
@@ -47,16 +54,17 @@
                       <div class="card card-info card-outline mb-4">
                         <!--begin::Header-->
                           <div class="card-header">
-                            <div class="card-title">Schedule Add Form</div>
+                            <div class="card-title">Class Schedule Update Form</div>
                           </div>
                         <!--end::Header-->
                         <!--begin::Form-->
-                          <form class="needs-validation" novalidate action="class_controller.php" method="post">
+                          <form class="needs-validation" novalidate action="class_update_controller.php" method="post">
                             <!--begin::Body-->
                               <div class="card-body">
                                 <!--begin::Row-->
                                   <div class="row g-3">
                                     <!--begin::Col-->
+                                    <input type="hidden" name="update_id" value="<?php echo $data["id"]; ?>"></br>
                                       <div class="col-md-6">
                                         <label for="validationCustom01" class="form-label">Teacher Name:</label>
                                           <?php                                               
@@ -145,7 +153,7 @@
                                         />
                                         <div class="valid-feedback">Looks good!</div>
                                       </div>
-                                    <!--end::Col-->                                                                       
+                                    <!--end::Col-->
                                     <!--begin::Col-->
                                       <div class="col-md-6">
                                         <label for="validationCustom02" class="form-label">Class Date</label>
@@ -159,7 +167,7 @@
                                         />
                                         <div class="valid-feedback">Looks good!</div>
                                       </div>
-                                    <!--end::Col-->
+                                    <!--end::Col-->                                    
                                   </div>
                                 <!--end::Row-->
                               </div>
@@ -167,7 +175,6 @@
                             <!--begin::Footer-->
                               <div class="card-footer">
                                 <button class="btn btn-info" type="submit">Save</button>
-                                <button class="btn btn-info" type="submit">Reset</button>
                               </div>
                             <!--end::Footer-->
                           </form>

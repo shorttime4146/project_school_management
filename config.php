@@ -29,7 +29,8 @@
             //header("Location:all_user_view.php");
             //header("Location:all_student_view.php");
             //header("Location:all_teacher_view.php");
-            header("Location:all_subject_view.php");
+            //header("Location:all_subject_view.php");
+            header("Location:all_class_schedule_view.php");
             return"successfull";
         }else{
             return"Error.</br>".$db_conn->error;
@@ -86,7 +87,8 @@
             //header("Location:all_user_view.php");
             //header("Location:all_student_view.php");
             //header("Location:all_teacher_view.php");
-            header("Location:all_subject_view.php");
+            //header("Location:all_subject_view.php");
+            header("Location:all_class_schedule_view.php");
         }else{
             return"Update Data Failed.</br>".$db_conn->error;
         }
@@ -102,7 +104,8 @@
             //header("Location:all_user_view.php");
             //header("Location:all_student_view.php");
             //header("Location:all_teacher_view.php");
-            header("Location:all_subject_view.php");
+            //header("Location:all_subject_view.php");
+            header("Location:all_class_schedule_view.php");
         }else{
             return $sql;
         }

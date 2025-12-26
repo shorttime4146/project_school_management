@@ -1,7 +1,7 @@
 <?php    
     require ("config.php");
 
-    $tid=""; $cls=""; $sec=""; $sname=""; $ct=""; $cd="";
+    $tid=""; $cls=""; $sec=""; $sname=""; $ct=""; $cd=""; $up_id="";
     if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($_POST["teacher_id"]!=""){
             $tid=$_POST["teacher_id"];
@@ -21,6 +21,9 @@
         if($_POST["class_date"]!=""){
             $cd=$_POST["class_date"];
         }
+        if($_POST["update_id"]!=""){
+            $up_id=$_POST["update_id"];
+        }
     }
 
     $data_arr=[
@@ -31,7 +34,8 @@
         'class_time'=>$ct,
         'class_date'=>$cd
     ];
+   
 
-    $result=insert_sql("class_schedule",$data_arr);
+    $result=update_sql("class_schedule",$data_arr, $up_id);
         echo $result;
 ?>

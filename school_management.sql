@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2025 at 09:35 PM
+-- Generation Time: Dec 26, 2025 at 10:38 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `class_schedule` (
   `id` int(11) NOT NULL,
-  `teachert_id` int(10) DEFAULT NULL,
+  `teacher_id` int(10) DEFAULT NULL,
   `class_id` int(10) DEFAULT NULL,
   `subject_id` int(10) DEFAULT NULL,
   `section_id` int(10) DEFAULT NULL,
@@ -42,6 +42,14 @@ CREATE TABLE `class_schedule` (
   `status_active` int(20) DEFAULT NULL,
   `is_deleted` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `class_schedule`
+--
+
+INSERT INTO `class_schedule` (`id`, `teacher_id`, `class_id`, `subject_id`, `section_id`, `class_time`, `class_date`, `inserted_by`, `insert_date`, `updated_by`, `update_date`, `status_active`, `is_deleted`) VALUES
+(1, 2, 5, 2, 1, '0000-00-00 00:00:00', '2025-12-25', NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 2, 5, 2, 1, '0000-00-00 00:00:00', '2025-12-25', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -231,7 +239,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `class_schedule`
 --
 ALTER TABLE `class_schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `students`

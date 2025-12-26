@@ -85,7 +85,7 @@
                                                     <div class="col-md-6">
                                                         <label for="validationCustom01" class="form-label">Subject Type:</label>
                                                         <?php 
-                                                            $sub_arr=array(1=>"Mathematics", 2=>"Theory");
+                                                            $sub_arr=array(1=>"Mathematics", 2=>"Theory");                                                            
                                                         ?>
                                                         <select name="type_id">
                                                             <option value="">Select type</option>
